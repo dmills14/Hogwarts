@@ -10,15 +10,28 @@ import UIKit
 
 class HouseGuessTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    //Landing Pad
+    var guess: HouseGuess? {
+        didSet {
+            updateViews()
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    //MARK: - Outlets
+    @IBOutlet weak var personGuessLabel: UILabel!
+    @IBOutlet weak var houseImageButton: UIButton!
+    
+    
+    //MARK: - Actions
+    @IBAction func houseButtonTapped(_ sender: Any) {
     }
-
-}
+    
+    //MARK: - Helpers
+    
+    func updateViews() {
+        
+        guard let guess = guess else { return }
+        personGuessLabel.text = guess.guessName
+        //Next add updateViews() to computed property of guess
+    }
+    
+}//end of class
