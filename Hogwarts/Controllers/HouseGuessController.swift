@@ -27,30 +27,45 @@ class HouseGuessController {
     
     init() {
         do {
-        try fetchedResultsController.performFetch()
+            try fetchedResultsController.performFetch()
         } catch {
             print("Error in \(#function) : \(error.localizedDescription) \n---n \(error)")
         }
-}
-
-//MARK: - CRUD
+    }
+    
+    //MARK: - CRUD
     func createGuess(guessName: String, house: String) {
         // 1. Create an instance
         let newGuess = HouseGuess(guessName: guessName, house: house)
         
         // 2.  Jump to persistence and then write the save part
-}
-
+        //Save
+        saveToPersistentStore()
+    }
+    
     func updateVisibility(houseGuess: HouseGuess) {
         houseGuess.isVisible.toggle()
+        // houseGuess.isVisible = !houseGuess.isVisible
         //Save
+        saveToPersistentStore()
     }
     
     func remove(houseGuess: HouseGuess) {
-    
+        
         let moc = CoreDataStack.context
         moc.delete(houseGuess)
         //Save
+        saveToPersistentStore()
+    }
+    
+    //MARK: - Persistence
+    //Now that persistence is created, add to create, update, and remove
+    func saveToPersistentStore() {
+        do {
+            try CoreDataStack.context.save()
+        } catch {
+           print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")
+        }
     }
     
 }//end of class
