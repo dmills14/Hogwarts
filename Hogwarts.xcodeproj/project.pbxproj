@@ -16,6 +16,7 @@
 		56BE62A024D3995900C9FE6E /* Hogwarts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE629F24D3995900C9FE6E /* Hogwarts.swift */; };
 		56BE62A224D3997F00C9FE6E /* HogwartsCD+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE62A124D3997F00C9FE6E /* HogwartsCD+Convenience.swift */; };
 		56BE62A524D39A4E00C9FE6E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE62A424D39A4E00C9FE6E /* CoreDataStack.swift */; };
+		56BE62AC24D39DB500C9FE6E /* HouseGuessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE62AB24D39DB500C9FE6E /* HouseGuessController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		56BE629F24D3995900C9FE6E /* Hogwarts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hogwarts.swift; sourceTree = "<group>"; };
 		56BE62A124D3997F00C9FE6E /* HogwartsCD+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HogwartsCD+Convenience.swift"; sourceTree = "<group>"; };
 		56BE62A424D39A4E00C9FE6E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		56BE62AB24D39DB500C9FE6E /* HouseGuessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseGuessController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,9 @@
 		56BE628724D3981200C9FE6E /* Hogwarts */ = {
 			isa = PBXGroup;
 			children = (
+				56BE62A924D39D9500C9FE6E /* Controllers */,
+				56BE62A824D39D8F00C9FE6E /* Models */,
+				56BE62A724D39D8400C9FE6E /* Views */,
 				56BE62A324D3999500C9FE6E /* Resources */,
 				56BE628E24D3981200C9FE6E /* Main.storyboard */,
 				56BE629624D3981500C9FE6E /* LaunchScreen.storyboard */,
@@ -82,6 +87,36 @@
 				56BE629924D3981500C9FE6E /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		56BE62A724D39D8400C9FE6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		56BE62A824D39D8F00C9FE6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		56BE62A924D39D9500C9FE6E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				56BE62AA24D39D9C00C9FE6E /* Model Controllers */,
+				56BE62AB24D39DB500C9FE6E /* HouseGuessController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		56BE62AA24D39D9C00C9FE6E /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +194,7 @@
 				56BE629324D3981200C9FE6E /* Hogwarts.xcdatamodeld in Sources */,
 				56BE628924D3981200C9FE6E /* AppDelegate.swift in Sources */,
 				56BE62A524D39A4E00C9FE6E /* CoreDataStack.swift in Sources */,
+				56BE62AC24D39DB500C9FE6E /* HouseGuessController.swift in Sources */,
 				56BE628B24D3981200C9FE6E /* SceneDelegate.swift in Sources */,
 				56BE62A224D3997F00C9FE6E /* HogwartsCD+Convenience.swift in Sources */,
 			);
